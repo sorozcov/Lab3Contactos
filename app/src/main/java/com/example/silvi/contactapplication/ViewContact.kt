@@ -33,6 +33,7 @@ internal class ViewContact() : AppCompatActivity() {
         }
         email.setOnClickListener{
             val mailto = "mailto:${email.text.toString()}" +
+                    "?cc=" + "" +
                     "&subject=" + Uri.encode("Correo desde mi ContactApp.") +
                     "&body=" + Uri.encode("Mi nombre es ${name.text.toString()} y mi teléfono es ${phone.text.toString()}")
 

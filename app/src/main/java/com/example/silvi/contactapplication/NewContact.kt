@@ -24,15 +24,16 @@ class NewContact : AppCompatActivity() {
             finish();
 
         }
+        //Agregar nuevo contacto al menu.
         createContact.setOnClickListener{
                 if ((namec.text.toString())=="" || phonec.text.toString().length!=8 || (emailc.text.toString()=="")){
                     // Initialize a new instance of
                     val builder = AlertDialog.Builder(this@NewContact)
 
-                    // Set the alert dialog title
+                    // Enviar alerta
                     builder.setTitle("Error")
 
-                    // Display a message on alert dialog
+                    // Mostrar mensaje de alerta si los datos no son validos
                     builder.setMessage("Error en los datos ingresados. No se pudo guardar contacto.")
                     builder.setPositiveButton("Ok"){dialog, which ->
 

@@ -20,6 +20,13 @@
         </activity>
         <activity android:name=".ViewContact">
         </activity>
+        <receiver
+                android:name=".EmailBroadcastReceiver"
+                android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SEND_TO" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

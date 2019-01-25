@@ -20,6 +20,7 @@ internal class MainActivity : AppCompatActivity() {
         val adapter = ArrayAdapter<Contact>(this, R.layout.listviews, ContactApplication.contacts)
         allContacts.adapter = adapter
 
+        //Crear un nuevo contacto
         newContact.setOnClickListener{
             val intent: Intent = Intent(this, NewContact::class.java);
             startActivity(intent);
@@ -27,14 +28,12 @@ internal class MainActivity : AppCompatActivity() {
 
         }
 
+        //Ver el contacto seleccionado
         allContacts.setOnItemClickListener { parent, view, position, id ->
             ContactApplication.contactSelected=(ContactApplication.contacts.get(position));
             val intent: Intent = Intent(this, ViewContact()::class.java)
             startActivity(intent)
             finish()
-
-
-
         }
 
 
